@@ -65,3 +65,17 @@ function removeParentListItem(){
     grandma.removeChild(mom);
     console.log(myList);
 }
+
+function saveList(){
+    var save = myList.toString();
+    setCookie("savedList", save, 1)
+
+}
+
+function clearList(){
+    document.getElementById("listDisplay").innerHTML = "";
+    for(var i; i < myList.length; ++i)
+    {
+        myList.pop();
+    }
+}
